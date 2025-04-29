@@ -9,16 +9,6 @@ jobs:
        - name: print status
          run: echo"push detected"
 
-on-pull-request:
-     if: github.event_name == 'pull_request'
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v4
-       - uses: actions/setup-java@v4
-         with:
-           distribution: 'temurin'
-           java-version: '17'
-       - name: Build with maven
-         run: mvn clean install
+
 
 
